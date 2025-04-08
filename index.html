@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - 个人主页</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="language-switch">
+        <button onclick="switchLanguage('zh')">中文</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <h1 data-lang="zh">申胜凡</h1>
+        <h1 data-lang="en" class="hidden">Shengfan Shen</h1>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 教育经历 -->
+        <section>
+            <h2 data-lang="zh">🎓 教育经历</h2>
+            <h2 data-lang="en" class="hidden">🎓 Education</h2>
+            <div class="card">
+                <h3 data-lang="zh">湖南大学 - 计算机科学与技术（拔尖班） (2022-2026)</h3>
+                <h3 data-lang="en" class="hidden">Hunan University - Computer Science (2022-2026)</h3>
+            </div>
+        </section>
+
+        <!-- 项目经历 -->
+        <section>
+            <h2 data-lang="zh">🚀 项目经历</h2>
+            <h2 data-lang="en" class="hidden">🚀 Projects</h2>
+            <div class="card">
+                <h3 data-lang="zh">对话系统</h3>
+                <h3 data-lang="en" class="hidden">AI Chatbot (Python)</h3>
+                <p data-lang="zh">基于级联ASR、LLM、TTS，构建低延迟、可打断的对话系统，并实现android前端</p>
+                <p data-lang="en" class="hidden">Building a Low-Latency, Interruptible Dialogue System Based on Cascaded ASR, LLM, and TTS, with Android Frontend Implementation</p>
+            </div>
+        </section>
+
+        <!-- 论文发布 -->
+        <section>
+            <h2 data-lang="zh">📜 论文发布</h2>
+            <h2 data-lang="en" class="hidden">📜 Publications</h2>
+            <div class="card">
+                <h3 data-lang="zh">SSE: A Speaking Style Extractor Based on Fine-Grained Contrastive Learning between Speech and Descriptive Text - ICASSP 2025</h3>
+                <h3 data-lang="en" class="hidden">SSE: A Speaking Style Extractor Based on Fine-Grained Contrastive Learning between Speech and Descriptive Text - ICASSP 2025</h3>
+            </div>
+        </section>
+
+        <!-- 个人简历 -->
+        <section>
+            <h2 data-lang="zh">📄 个人简历</h2>
+            <h2 data-lang="en" class="hidden">📄 Resume</h2>
+            <div class="card">
+                <p data-lang="zh">下载完整简历：<a href="resume.pdf" download>点击这里</a></p>
+                <p data-lang="en" class="hidden">Download full resume: <a href="resume.pdf" download>Click Here</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
