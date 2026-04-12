@@ -1,49 +1,48 @@
 ---
 layout: page
-title: 关于我
+title: About Me
 ---
 
 <div style="text-align: right; margin-bottom: 20px;">
-  <strong>中文</strong> | <a href="/about-en/">English</a>
+  <strong>English</strong> | <a href="/zh/">中文</a>
 </div>
 
-## 关于我
+I am Shengfan Shen. I will soon be an incoming Master student at the School of Intelligence Science and Technology, Nanjing University, advised by Prof. Shuai Wang. My research focuses on speech synthesis and its evaluation. I received my Bachelor's degree in Computer Science and Technology from Hunan University, where I joined Prof. Zixing Zhang's lab.
 
-我是申胜凡，即将入学南京大学智能科学与技术学院，在王帅教授指导下攻读硕士学位，研究方向为语音合成及其测评。我本科毕业于湖南大学计算机科学与技术专业，曾加入张子兴教授课题组。
+## Basic Information
 
-## 基本信息
+- **Email:** [ssf031103@gmail.com](mailto:ssf031103@gmail.com)
+- **GitHub:** [SSF-1103](https://github.com/SSF-1103)
+- **Hometown:** Chongqing, China
 
-- **邮箱：** [ssf031103@gmail.com](mailto:ssf031103@gmail.com)
-- **GitHub：** [SSF-1103](https://github.com/SSF-1103)
+## Education
 
-## 教育背景
+- **Nanjing University, School of Intelligence Science and Technology**
+  - Master's in Artificial Intelligence (Incoming)
+  - 2026 – Present
 
-- **南京大学 智能科学与技术学院**
-  - 硕士 · 人工智能（即将入学）
-  - 2026 – 至今
-
-- **湖南大学 计算机科学与技术学院**
-  - 本科 · 计算机科学与技术
+- **Hunan University, College of Computer Science**
+  - Bachelor's in Computer Science and Technology
   - 2022 – 2026
 
-## 研究方向
+## Research Interests
 
-- 语音合成 (Text To Speech)
-- 语音合成测评 (TTS Evaluation)
+- Speech Synthesis (Text To Speech)
+- TTS Evaluation
 
-## 实习经历
+## Experience
 
-- **小米 · 语音合成组实习生**
-  - 从事语音合成相关研究
+- **Xiaomi · LLM+Speech Generation Group Intern**
+  - Working on speech synthesis and evaluation research
 
-## 发表论文
+## Publications
 
 - **Iterate to Differentiate: Enhancing Discriminability and Reliability in Zero-Shot TTS Evaluation**  
-  **申胜凡**, Di Wu, Xingchen Song, Dinghao Zhou, Liumeng Xue, Meng Meng, Jian Luan, Shuai Wang  
+  **Shengfan Shen**, Di Wu, Xingchen Song, Dinghao Zhou, Liumeng Xue, Meng Meng, Jian Luan, Shuai Wang  
   *Interspeech 2026* (Under Review)  
   [arXiv](https://arxiv.org/abs/2603.24430)
 
 - **DEBATE: A Dataset for Disentangling Textual Ambiguity in Mandarin Through Speech**  
-  Haotian Guo, Jing Han, Yongfeng Tu, Shihao Gao, **申胜凡**, Wulong Xiang, Weihao Gan, Zixing Zhang  
+  Haotian Guo, Jing Han, Yongfeng Tu, Shihao Gao, **Shengfan Shen**, Wulong Xiang, Weihao Gan, Zixing Zhang  
   *arXiv*  
   [arXiv](https://arxiv.org/abs/2506.07502)
