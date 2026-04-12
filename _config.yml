@@ -1,0 +1,32 @@
+---
+# Site settings
+title: 申胜凡
+description: 语音合成 · 语音合成测评
+url: https://ssf-1103.github.io
+author:
+  name: 申胜凡
+  email: ssf031103@gmail.com
+  github: SSF-1103
+
+# Theme
+remote_theme: vszhub/not-pure-poole
+
+# Build settings
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      title: 关于我
+---
