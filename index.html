@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>申胜凡 | 个人主页</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/pure-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --body-color: #333;
+            --body-bg: #fff;
+            --heading-color: #333;
+            --link-color: #333;
+            --border-color: #eee;
+            --muted-color: #888;
+            --spacer: 1rem;
+            --spacer-2: 1.5rem;
+            --spacer-3: 3rem;
+            --sidebar-left-w: 36%;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,91 +28,127 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            color: var(--body-color);
+            background-color: var(--body-bg);
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        .container {
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-left {
+            display: flex;
+            flex-direction: column;
+            padding: var(--spacer-3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .content {
+            padding: var(--spacer-2);
+            min-height: 100vh;
         }
 
         .avatar {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background-color: #e0e0e0;
-            margin: 0 auto 20px;
+            background-color: rgba(255,255,255,0.2);
+            margin: 0 auto var(--spacer-2);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 14px;
+            overflow: hidden;
         }
 
         .avatar img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
         }
 
-        h1 {
-            font-size: 28px;
+        .avatar-placeholder {
+            font-size: 14px;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .masthead-title {
+            text-align: center;
+            margin-bottom: var(--spacer);
+        }
+
+        .masthead-title a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 10px;
         }
 
-        .nav {
-            margin-top: 15px;
-        }
-
-        .nav a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 10px;
+        .masthead-tagline {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
+            margin-bottom: var(--spacer-2);
         }
 
-        .nav a:hover {
-            color: #333;
+        .navigation-list {
+            list-style: none;
+            text-align: center;
         }
 
-        .social-links {
-            margin-top: 15px;
+        .navigation-item {
+            margin-bottom: 8px;
         }
 
-        .social-links a {
-            color: #666;
-            margin: 0 8px;
-            font-size: 14px;
+        .navigation-item a {
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s;
         }
 
-        .social-links a:hover {
-            color: #333;
+        .navigation-item a:hover {
+            color: #fff;
         }
 
-        section {
-            margin-bottom: 40px;
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: var(--spacer-2);
         }
 
+        .social-icons a {
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        /* Main content styles */
         h2 {
             font-size: 18px;
             font-weight: 600;
-            color: #333;
-            border-bottom: 1px solid #eee;
+            color: var(--heading-color);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 8px;
-            margin-bottom: 15px;
+            margin-bottom: var(--spacer);
+            margin-top: var(--spacer-2);
         }
 
         .bio {
             font-size: 15px;
             color: #555;
             line-height: 1.8;
+            margin-bottom: var(--spacer);
         }
 
         ul {
@@ -105,32 +156,32 @@
         }
 
         ul li {
-            margin-bottom: 8px;
-            font-size: 14px;
+            margin-bottom: 10px;
+            font-size: 15px;
         }
 
         .education-item, .experience-item {
-            margin-bottom: 15px;
+            margin-bottom: var(--spacer);
         }
 
         .education-item .school {
             font-weight: 600;
-            color: #333;
+            color: var(--heading-color);
         }
 
         .education-item .degree {
             color: #555;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .education-item .time {
-            color: #888;
+            color: var(--muted-color);
             font-size: 13px;
         }
 
         .experience-item .title {
             font-weight: 600;
-            color: #333;
+            color: var(--heading-color);
         }
 
         .experience-item .company {
@@ -139,17 +190,37 @@
         }
 
         .experience-item .time {
-            color: #888;
+            color: var(--muted-color);
             font-size: 13px;
         }
 
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .info-list .info-label {
+            font-weight: 600;
+            min-width: 80px;
+        }
+
+        .info-list a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .info-list a:hover {
+            text-decoration: underline;
+        }
+
         .publication-item {
-            margin-bottom: 12px;
+            margin-bottom: var(--spacer);
             font-size: 14px;
         }
 
         .publication-item .title {
-            color: #333;
+            color: var(--heading-color);
         }
 
         .publication-item .authors {
@@ -158,9 +229,22 @@
         }
 
         .publication-item .venue {
-            color: #888;
+            color: var(--muted-color);
             font-style: italic;
             font-size: 13px;
+        }
+
+        .publication-item .link {
+            font-size: 13px;
+        }
+
+        .publication-item .link a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .publication-item .link a:hover {
+            text-decoration: underline;
         }
 
         .hobbies {
@@ -178,103 +262,172 @@
         }
 
         footer {
+            margin-top: var(--spacer-3);
+            padding-top: var(--spacer);
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
+            color: var(--muted-color);
             font-size: 12px;
         }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 15px;
+        .placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* Desktop layout */
+        @media (min-width: 48rem) {
+            .container {
+                display: flex;
             }
 
-            h1 {
-                font-size: 24px;
+            .sidebar-left {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                width: var(--sidebar-left-w);
+                height: 100vh;
+                overflow-y: auto;
             }
 
-            .nav a {
-                display: block;
-                margin: 8px 0;
+            .content {
+                margin-left: var(--sidebar-left-w);
+                padding: var(--spacer-3);
+                width: calc(100% - var(--sidebar-left-w));
+            }
+        }
+
+        /* Mobile layout */
+        @media (max-width: 48rem) {
+            .sidebar-left {
+                min-height: auto;
+                padding: var(--spacer-2);
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .masthead-title a {
+                font-size: 20px;
+            }
+
+            .navigation-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .navigation-item {
+                margin: 0;
+            }
+
+            .social-icons {
+                margin-top: var(--spacer);
+            }
+
+            .content {
+                padding: var(--spacer-2);
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="avatar">
-            <!-- 头像待添加 -->
-        </div>
-        <h1>申胜凡</h1>
-        <div class="nav">
-            <a href="#about">关于我</a>
-            <a href="#education">教育背景</a>
-            <a href="#research">研究方向</a>
-            <a href="#experience">经历</a>
-        </div>
-        <div class="social-links">
-            <a href="mailto:ssf031103@gmail.com">邮箱</a>
-            <a href="https://github.com/SSF-1103" target="_blank">GitHub</a>
-        </div>
-    </header>
+    <div class="container">
+        <aside class="sidebar-left">
+            <div class="avatar">
+                <div class="avatar-placeholder">暂无头像</div>
+            </div>
+            <div class="masthead-title">
+                <a href="/">申胜凡</a>
+            </div>
+            <div class="masthead-tagline">
+                语音合成 · 语音合成测评
+            </div>
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="#about">关于我</a></li>
+                    <li class="navigation-item"><a href="#education">教育背景</a></li>
+                    <li class="navigation-item"><a href="#research">研究方向</a></li>
+                    <li class="navigation-item"><a href="#experience">实习经历</a></li>
+                    <li class="navigation-item"><a href="#publications">发表论文</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="mailto:ssf031103@gmail.com" title="邮箱"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/SSF-1103" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </aside>
 
-    <section id="about">
-        <h2>关于我</h2>
-        <p class="bio">
-            大家好，我是申胜凡。本科毕业于湖南大学计算机科学与技术专业，即将入学南京大学智能科学与技术学院攻读硕士学位，导师为王帅老师。我的研究方向为语音合成及其测评。目前在小米的语音组实习，从事语音合成相关研究工作。
-        </p>
-    </section>
+        <main class="content">
+            <section id="about">
+                <h2>关于我</h2>
+                <p class="bio">
+                    大家好，我是申胜凡。本科毕业于湖南大学计算机科学与技术专业，即将入学南京大学智能科学与技术学院攻读硕士学位，导师为王帅老师。我的研究方向为语音合成及其测评。目前在小米的语音组实习，从事语音合成相关研究工作。
+                </p>
+            </section>
 
-    <section id="education">
-        <h2>教育背景</h2>
-        <ul>
-            <li class="education-item">
-                <span class="school">南京大学 智能科学与技术学院</span>
-                <span class="degree"> · 硕士（即将入学）</span>
-                <br><span class="time">2026 - </span>
-            </li>
-            <li class="education-item">
-                <span class="school">湖南大学 计算机科学与技术学院</span>
-                <span class="degree"> · 本科</span>
-                <br><span class="time">2022 - 2026</span>
-            </li>
-        </ul>
-    </section>
+            <section id="info">
+                <h2>基本信息</h2>
+                <ul class="info-list">
+                    <li><span class="info-label">邮箱：</span><a href="mailto:ssf031103@gmail.com">ssf031103@gmail.com</a></li>
+                    <li><span class="info-label">GitHub：</span><a href="https://github.com/SSF-1103" target="_blank">SSF-1103</a></li>
+                </ul>
+            </section>
 
-    <section id="research">
-        <h2>研究方向</h2>
-        <ul>
-            <li>语音合成 (Speech Synthesis)</li>
-            <li>语音合成测评 (TTS Evaluation)</li>
-        </ul>
-    </section>
+            <section id="education">
+                <h2>教育背景</h2>
+                <ul>
+                    <li class="education-item">
+                        <span class="school">南京大学 智能科学与技术学院</span>
+                        <br><span class="degree">硕士（即将入学）</span>
+                        <br><span class="time">2026 – </span>
+                    </li>
+                    <li class="education-item">
+                        <span class="school">湖南大学 计算机科学与技术学院</span>
+                        <br><span class="degree">本科 · 计算机科学与技术</span>
+                        <br><span class="time">2022 – 2026</span>
+                    </li>
+                </ul>
+            </section>
 
-    <section id="experience">
-        <h2>实习经历</h2>
-        <ul>
-            <li class="experience-item">
-                <span class="title">小米</span> · <span class="company">语音组实习生</span>
-                <br><span class="time">从事语音合成相关研究</span>
-            </li>
-        </ul>
-    </section>
+            <section id="research">
+                <h2>研究方向</h2>
+                <ul>
+                    <li>语音合成 (Speech Synthesis)</li>
+                    <li>语音合成测评 (TTS Evaluation)</li>
+                </ul>
+            </section>
 
-    <section id="publications">
-        <h2>发表论文</h2>
-        <p style="color: #888; font-size: 14px;">（待添加）</p>
-    </section>
+            <section id="experience">
+                <h2>实习经历</h2>
+                <ul>
+                    <li class="experience-item">
+                        <span class="title">小米</span>
+                        <br><span class="company">语音组实习生</span>
+                        <br><span class="time">从事语音合成相关研究</span>
+                    </li>
+                </ul>
+            </section>
 
-    <section id="hobbies">
-        <h2>个人爱好</h2>
-        <div class="hobbies">
-            <span class="hobby-tag">（待添加）</span>
-        </div>
-    </section>
+            <section id="publications">
+                <h2>发表论文</h2>
+                <p class="placeholder">（待添加）</p>
+            </section>
 
-    <footer>
-        <p>© 2026 申胜凡. All rights reserved.</p>
-    </footer>
+            <section id="hobbies">
+                <h2>个人爱好</h2>
+                <div class="hobbies">
+                    <span class="hobby-tag placeholder">（待添加）</span>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2026 申胜凡. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
