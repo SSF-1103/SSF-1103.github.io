@@ -43,7 +43,7 @@ title: 关于我
   *Interspeech 2026* (Under Review)  
   [arXiv](https://arxiv.org/abs/2603.24430)
 
-  **Any2Speech: Borderless Long Audio Synthesis**  
+- **Any2Speech: Borderless Long Audio Synthesis**  
   Xingchen Song, Di Wu, Dinghao Zhou, Pengyu Cheng, Hongwu Ding, Yunchao He, Jie Wang, **Shengfan Shen**, Sixiang Lv, Lichun Fan, Hang Su, Yifeng Wang, Shuai Wang, Meng Meng, Jian Luan  
   *arXiv*  
   [arXiv](https://arxiv.org/abs/2603.19798v1) 
