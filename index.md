@@ -7,7 +7,7 @@ title: About Me
   <strong>English</strong> | <a href="/zh/">中文</a>
 </div>
 
-I am Shengfan Shen. I will soon be an incoming Master student at the School of Intelligence Science and Technology, Nanjing University, advised by Prof. Shuai Wang. My research focuses on speech synthesis and its evaluation. I received my Bachelor's degree in Computer Science and Technology from Hunan University, where I joined Prof. Zixing Zhang's lab.
+I am Shengfan Shen. I will soon be an incoming Master student at the School of Intelligence Science and Technology, Nanjing University, advised by [Prof. Shuai Wang](https://shuaiwang-nju.github.io/). My research focuses on speech synthesis and its evaluation. I received my Bachelor's degree in Computer Science and Technology from Hunan University, where I joined Prof. Zixing Zhang's lab.
 
 ## Basic Information
 
